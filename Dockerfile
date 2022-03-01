@@ -19,6 +19,7 @@ COPY package.json /app
 
 # Some debates between npm and yarn
 # https://tomiko0404.hatenablog.com/entry/npm-yarn-install
+# https://www.section.io/engineering-education/npm-vs-yarn-which-one-to-choose/#:~:text=One%20of%20the%20main%20difference,and%20install%20multiple%20packages%20simultaneously.
 RUN npm update npm
 RUN npm install
 COPY . /app
