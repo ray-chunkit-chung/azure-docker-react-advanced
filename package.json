@@ -1,0 +1,29 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A simple React.js app",
+  "scripts": {
+    "start": "PORT=$PORT react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ray-chunkit-chung/azure-docker-react-advanced"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}
