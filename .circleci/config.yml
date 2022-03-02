@@ -1,7 +1,16 @@
 version: 2.1
 
+
+# Define the executors for this project
+executors:
+ docker-executor:
+   docker:
+     - image: circleci/openjdk:9.0.4-12
+
+
 # Define the jobs we want to run for this project
 jobs:
+  # Define build
   build:
     docker:
       - image: raychung/azure-docker-react-advanced:latest
@@ -17,6 +26,8 @@ jobs:
             docker build -t raychung/azure-docker-react-advanced:latest .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push raychung/azure-docker-react-advanced:latest
+
+  # Define test
   test:
     docker:
       - image: raychung/azure-docker-react-advanced:latest
@@ -27,9 +38,17 @@ jobs:
       - checkout
       - run: echo "this is the test job"
 
+  # Specify build executors
+  build-with-docker:
+    executor: docker-executor
+    steps:
+      - build
+
+
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
-      - build
+      - build-with-docker
       - test
+
