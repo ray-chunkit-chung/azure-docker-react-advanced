@@ -11,6 +11,12 @@ jobs:
     steps:
       - checkout
       - run: echo "this is the build job"
+      - run:
+          name: Build and push Docker image
+          command: |
+            docker build -t raychung/azure-docker-react-advanced:latest .
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+            docker push raychung/azure-docker-react-advanced:latest
   test:
     docker:
       - image: raychung/azure-docker-react-advanced:latest
