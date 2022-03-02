@@ -1,1 +1,0 @@
-﻿# azure-docker-react-advanced
