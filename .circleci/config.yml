@@ -13,7 +13,8 @@ commands:
   #     - run: echo "this is the test job"
   build:
     steps:
-      - setup_remote_docker
+      - setup_remote_docker:
+          version: 19.03.13
       - checkout
       - run: echo "this is the build job"
       - run:
