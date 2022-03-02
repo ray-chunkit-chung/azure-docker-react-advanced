@@ -13,6 +13,8 @@ commands:
   #     - run: echo "this is the test job"
   build:
     steps:
+      - setup_remote_docker:
+          version: 19.03.13
       - checkout
       - run: echo "this is the build job"
       - run:
@@ -21,8 +23,7 @@ commands:
             docker build -t raychung/azure-docker-react-advanced:latest .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push raychung/azure-docker-react-advanced:latest
-      - setup_remote_docker:
-          version: 19.03.13
+
 
 # Define the executors for this project
 executors:
