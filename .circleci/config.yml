@@ -2,21 +2,16 @@ version: 2.1
 
 # Define test and build commands
 commands:
-  test:
-    docker:
-      - image: raychung/azure-docker-react-advanced:latest
-        auth:
-          username: raychung
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    steps:
-      - checkout
-      - run: echo "this is the test job"
+  # test:
+  #   docker:
+  #     - image: raychung/azure-docker-react-advanced:latest
+  #       auth:
+  #         username: raychung
+  #         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+  #   steps:
+  #     - checkout
+  #     - run: echo "this is the test job"
   build:
-    docker:
-      - image: raychung/azure-docker-react-advanced:latest
-        auth:
-          username: raychung
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
       - run: echo "this is the build job"
@@ -42,10 +37,10 @@ jobs:
     steps:
       - build
   # Specify test executors
-  test-with-docker:
-    executor: docker-executor
-    steps:
-      - test
+  # test-with-docker:
+  #   executor: docker-executor
+  #   steps:
+  #     - test
 
 
 # Orchestrate our job run sequence
@@ -53,5 +48,5 @@ workflows:
   build_and_test:
     jobs:
       - build-with-docker
-      - test-with-docker
+      # - test-with-docker
 
