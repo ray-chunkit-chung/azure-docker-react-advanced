@@ -8,5 +8,7 @@ https://stackoverflow.com/questions/62477448/github-could-not-create-service-hoo
 https://circleci.com/docker/
 https://circleci.com/blog/build-cicd-piplines-using-docker/
 https://circleci.com/docs/2.0/concepts/
+https://circleci.com/docs/2.0/building-docker-images/
 
+Can't believe it is so non-intuitive...
 
