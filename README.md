@@ -4,7 +4,17 @@
 
 # Experiment Journey
 
+
+## Jenkins
+ - https://hub.docker.com/r/jenkins/jenkins
+ - https://github.com/jenkinsci/docker/blob/master/README.md
+ - https://qiita.com/4_mio_11/items/446a12ffd38dfcac9e25
+
+
 ## Docker Desktop
+
+Spinning up the dev env with VSCode and Docker desktop has been very smooth. Now connecting it with Jenkins docker image
+
 
 
 ## Azure DevOps
