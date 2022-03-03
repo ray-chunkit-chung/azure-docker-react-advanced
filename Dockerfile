@@ -1,14 +1,3 @@
-# Docker best practice
-# https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-
-# Example from here
-# https://mherman.org/blog/dockerizing-a-react-app/
-# https://github.com/sanjaysaini2000/react-todo-app/blob/master/Dockerfile
-
-# Add this line to test auto build in docker hub v2
-# Add this line to test auto deploy to azure
-# Add this line to test build trigger for circleci
-# What happens if we use docker desktop dev env?
 
 # build environment
 FROM alpine:latest as build
