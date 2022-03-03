@@ -8,6 +8,7 @@
 # Add this line to test auto build in docker hub v2
 # Add this line to test auto deploy to azure
 # Add this line to test build trigger for circleci
+# What happens if we use docker desktop dev env?
 
 # build environment
 FROM alpine:latest as build
