@@ -11,6 +11,17 @@
  - https://qiita.com/4_mio_11/items/446a12ffd38dfcac9e25
 
 
+Image
+```
+docker pull jenkins/jenkins:lts-jdk11
+```
+
+App
+```
+docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+```
+
+
 ## Docker Desktop
 
 Spinning up the dev env with VSCode and Docker desktop has been very smooth. Now connecting it with Jenkins docker image
