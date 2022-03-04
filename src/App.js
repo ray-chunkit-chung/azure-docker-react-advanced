@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Hello world! Azure App Service Better Faster Stronger</h1>
+          <h1 className="App-title">Hello world! Azure App Service. Better Faster Stronger</h1>
         </header>
         <p className="App-intro">
           All work and no play makes 0xjack a dull boy.
