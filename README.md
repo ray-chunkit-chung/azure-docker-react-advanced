@@ -1,6 +1,10 @@
-# azure-docker-react-advanced
+# Azure Dockerfile React
 
 A better starter version than [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
+
+# Getting Started
+
+coming soon...
 
 # Current Stack
 
