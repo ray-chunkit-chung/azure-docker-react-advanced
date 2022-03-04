@@ -1,9 +1,17 @@
 # azure-docker-react-advanced
 
+A better starter version than [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
 
+# Current Stack
+
+ - src on github
+ - docker desktop x vscode
+ - build using Dockerfile
+ - auto test and build by circleCI
+ - build to dockerhub
+ - azure app service auto deploy triggered by latest build on dockerhub
 
 # Experiment Journey
-
 
 ## Jenkins
  - https://hub.docker.com/r/jenkins/jenkins
@@ -21,12 +29,13 @@ App
 docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
 ```
 
+Jenkins look really promising. For the moment, CircleCI is successful, but I will definitely create a Jenkins version.
 
 ## Docker Desktop
 
 Spinning up the dev env with VSCode and Docker desktop has been very smooth. Now connecting it with Jenkins docker image
 
-
+Docker Desktop x VSCode is very good. Successfully encapsulate all the things I need. 
 
 ## Azure DevOps
 Azure DevOps keeps throwing me this error.
@@ -50,22 +59,25 @@ Can't believe it is so non-intuitive...
 And it is getting more and more difficult....
 https://support.circleci.com/hc/en-us/articles/115015849028-Docker-Daemon-Not-Available?auth_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjo4MjgyMDksInVzZXJfaWQiOm51bGwsInRpY2tldF9pZCI6MTA1MzY5LCJkZWZsZWN0aW9uX2lkIjoxMjYwOTU1MzA4MzkwLCJhcnRpY2xlcyI6WzM2MDAwMDIxNzg2OCwxMTUwMTU4NDkwMjgsMzYwMDU4MDk1NDcxXSwidG9rZW4iOm51bGwsImV4cCI6MTY0ODc5MTY2N30.qahx35gc-zWYzYINtkoK-WQOGk7j0gx5we6aw9lJMbY
 
+Finally solved this issue, the answer is we need to pass user auth info as env var. They also have "contexts" for auth sharing. Good
 
-
+## Docker Image
 
 Docker best practice
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 - https://mherman.org/blog/dockerizing-a-react-app/
 - https://github.com/sanjaysaini2000/react-todo-app/blob/master/Dockerfile
 
+Not much issue here. 
 
 
-## History
+# Hogehoge
 
 - Add this line to test auto build in docker hub v2
 - Add this line to test auto deploy to azure
 - Add this line to test build trigger for circleci
 - What happens if we use docker desktop dev env?
 - Let's remove all circleci and azure devops depenedenc as I am trying docker desktop
+- Add back circleci and remove github workflow
 
 
