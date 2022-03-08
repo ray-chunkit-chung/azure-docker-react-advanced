@@ -16,15 +16,22 @@ commands:
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker push $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest
   test:
+    # steps:
+    #   - checkout
+    #   - run: echo "this is the test job"
+    #   - run:
+    #       name: install dependencies
+    #       command: yarn install
+    #   - run:
+    #       name: unit test
+    #       command: yarn test
     steps:
-      - checkout
       - run: echo "this is the test job"
       - run:
-          name: install dependencies
-          command: yarn install
-      - run:
           name: unit test
-          command: yarn test
+          command: |
+            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+            docker run $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest sh -c "echo hello"
   deploy:
     steps:
       - setup_remote_docker:
@@ -35,8 +42,8 @@ commands:
       - run:
           name: Push tested image to auto-deploy
           command: |
-            docker build -t $DOCKER_USERNAME/azure-docker-react-advanced:latest .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+            docker pull $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest
             docker push $DOCKER_USERNAME/azure-docker-react-advanced:latest
 
 # Define the executors for this project
