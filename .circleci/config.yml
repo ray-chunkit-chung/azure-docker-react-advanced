@@ -26,6 +26,9 @@ commands:
     #       name: unit test
     #       command: yarn test
     steps:
+      - setup_remote_docker:
+          version: 20.10.11
+          docker_layer_caching: true
       - run: echo "this is the test job"
       - run:
           name: unit test
