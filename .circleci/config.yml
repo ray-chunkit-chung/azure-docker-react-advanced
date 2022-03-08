@@ -2,16 +2,6 @@ version: 2.1
 
 # Define test and build commands
 commands:
-  test:
-    steps:
-      - checkout
-      - run: echo "this is the test job"
-      - run:
-          name: install dependencies
-          command: yarn install
-      - run:
-          name: unit test
-          command: yarn test
   build:
     steps:
       - setup_remote_docker:
@@ -25,34 +15,44 @@ commands:
             docker build -t $DOCKER_USERNAME/azure-docker-react-advanced:latest .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker push $DOCKER_USERNAME/azure-docker-react-advanced:latest
+  test:
+    steps:
+      - checkout
+      - run: echo "this is the test job"
+      - run:
+          name: install dependencies
+          command: yarn install
+      - run:
+          name: unit test
+          command: yarn test
 
 # Define the executors for this project
 executors:
-  ci-executor:
-    docker:
-      - image: circleci/node:latest
   build-executor:
     docker:
       - image: circleci/openjdk:latest
+  test-executor:
+    docker:
+      - image: circleci/node:latest
 
 # Define the jobs we want to run for this project
 jobs:
-  # Specify test executors
-  test-with-docker:
-    executor: ci-executor
-    steps:
-      - test
   # Specify build executors
   build-with-docker:
     executor: build-executor
     steps:
       - build
-
+  # Specify test executors
+  test-with-docker:
+    executor: test-executor
+    steps:
+      - test
 
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
-      - test-with-docker
       - build-with-docker
-
+      - test-with-docker:
+          requires:
+            - build-with-docker
