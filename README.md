@@ -17,6 +17,17 @@ coming soon...
 
 # Experiment Journey
 
+## Setup Test
+
+Read this to setip test
+
+https://medium.com/geekculture/how-to-add-docker-to-create-react-app-cra-run-unit-tests-439b3b25bd2c
+
+
+## Yarn with circleci
+https://circleci.com/docs/2.0/yarn/
+
+
 ## Jenkins
  - https://hub.docker.com/r/jenkins/jenkins
  - https://github.com/jenkinsci/docker/blob/master/README.md
@@ -74,6 +85,14 @@ Docker best practice
 
 Not much issue here. 
 
+
+## Reference
+
+Sorry I forgot who I pull the original code from. I visited random tutorials, e.g.,
+ - https://github.com/sanjaysaini2000/react-todo-app
+ - https://github.com/facebook/create-react-app
+
+Kindly let me know if I used your code without reference. I will add it back.
 
 # Hogehoge
 
