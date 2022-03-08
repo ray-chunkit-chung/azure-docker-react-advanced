@@ -71,10 +71,11 @@ Optimizing config.yml
  - https://qiita.com/kasaharu/items/bfeb2a41b9d636388531
 
 Read a lot how to kick start
-- https://circleci.com/docker/
-- https://circleci.com/blog/build-cicd-piplines-using-docker/
-- https://circleci.com/docs/2.0/concepts/
-- https://circleci.com/docs/2.0/building-docker-images/
+ - https://circleci.com/docs/2.0/workflows/
+ - https://circleci.com/docker/
+ - https://circleci.com/blog/build-cicd-piplines-using-docker/
+ - https://circleci.com/docs/2.0/concepts/
+ - https://circleci.com/docs/2.0/building-docker-images/
 
 Can't believe it is so non-intuitive...
 
@@ -86,9 +87,9 @@ Finally solved this issue, the answer is we need to pass user auth info as env v
 ## Docker Image
 
 Docker best practice
-- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-- https://mherman.org/blog/dockerizing-a-react-app/
-- https://github.com/sanjaysaini2000/react-todo-app/blob/master/Dockerfile
+ - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+ - https://mherman.org/blog/dockerizing-a-react-app/
+ - https://github.com/sanjaysaini2000/react-todo-app/blob/master/Dockerfile
 
 Not much issue here. 
 
@@ -103,14 +104,14 @@ Kindly let me know if I used your code without reference. I will add it back.
 
 # Hogehoge
 
-- Add this line to test auto build in docker hub v2
-- Add this line to test auto deploy to azure
-- Add this line to test build trigger for circleci
-- What happens if we use docker desktop dev env?
-- Let's remove all circleci and azure devops depenedenc as I am trying docker desktop
-- Add back circleci and remove github workflow
+ - Add this line to test auto build in docker hub v2
+ - Add this line to test auto deploy to azure
+ - Add this line to test build trigger for circleci
+ - What happens if we use docker desktop dev env?
+ - Let's remove all circleci and azure devops depenedenc as I am trying docker desktop
+ - Add back circleci and remove github workflow
 
-- Some debates between npm and yarn
-    - https://tomiko0404.hatenablog.com/entry/npm-yarn-install
-    - https://www.section.io/engineering-education/npm-vs-yarn-which-one-to-choose:~:text=One%20of%20the%20main%20differenceand%20install%20multiple%20packages%20simultaneously.
+ - Some debates between npm and yarn
+ - https://tomiko0404.hatenablog.com/entry/npm-yarn-install
+ - https://www.section.io/engineering-education/npm-vs-yarn-which-one-to-choose:~:text=One%20of%20the%20main%20differenceand%20install%20multiple%20packages%20simultaneously.
 
