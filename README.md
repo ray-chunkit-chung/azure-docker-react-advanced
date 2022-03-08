@@ -65,6 +65,7 @@ https://stackoverflow.com/questions/62477448/github-could-not-create-service-hoo
 ## CirlceCI
 
 Optimizing config.yml
+ - https://circleci.com/docs/2.0/optimizations/
  - https://transcend.io/blog/accelerate-your-deploys-with-these-5-circleci-optimizations/
  - https://dev.classmethod.jp/articles/circleci-getting-started-jest/
  - https://circleci.com/docs/2.0/yarn/
@@ -76,6 +77,7 @@ Read a lot how to kick start
  - https://circleci.com/blog/build-cicd-piplines-using-docker/
  - https://circleci.com/docs/2.0/concepts/
  - https://circleci.com/docs/2.0/building-docker-images/
+ - https://github.com/CircleCI-Public/circleci-demo-workflows/blob/parallel-jobs/.circleci/config.yml
 
 Can't believe it is so non-intuitive...
 
