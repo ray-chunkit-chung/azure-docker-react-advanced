@@ -63,6 +63,11 @@ https://stackoverflow.com/questions/62477448/github-could-not-create-service-hoo
 
 
 ## CirlceCI
+
+Optimizing config.yml
+https://transcend.io/blog/accelerate-your-deploys-with-these-5-circleci-optimizations/
+
+
 Read a lot how to kick start
 - https://circleci.com/docker/
 - https://circleci.com/blog/build-cicd-piplines-using-docker/
