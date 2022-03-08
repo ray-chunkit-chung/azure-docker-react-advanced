@@ -1,4 +1,4 @@
-version: latest
+version: 2.1
 
 # Define test and build commands
 commands:
