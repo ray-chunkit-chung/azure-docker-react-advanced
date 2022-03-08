@@ -35,7 +35,7 @@ executors:
       - image: circleci/node:latest
   build-executor:
     docker:
-      - image: circleci/openjdk:9.0.4-12
+      - image: circleci/openjdk:latest
 
 
 # Define the jobs we want to run for this project
