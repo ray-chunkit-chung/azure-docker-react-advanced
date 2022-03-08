@@ -1,4 +1,4 @@
-version: 2.1
+version: latest
 
 # Define test and build commands
 commands:
@@ -12,11 +12,10 @@ commands:
       - run:
           name: unit test
           command: yarn test
-
   build:
     steps:
       - setup_remote_docker:
-          version: 20.10.11
+          version: latest
           docker_layer_caching: true
       - checkout
       - run: echo "this is the build job"
@@ -27,7 +26,6 @@ commands:
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
             docker push raychung/azure-docker-react-advanced:latest
 
-
 # Define the executors for this project
 executors:
   ci-executor:
@@ -36,7 +34,6 @@ executors:
   build-executor:
     docker:
       - image: circleci/openjdk:latest
-
 
 # Define the jobs we want to run for this project
 jobs:
