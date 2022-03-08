@@ -30,24 +30,24 @@ commands:
 
 # Define the executors for this project
 executors:
-  build-executor:
-    docker:
-      - image: circleci/openjdk:9.0.4-12
   ci-executor:
     docker:
       - image: circleci/node:latest
+  build-executor:
+    docker:
+      - image: circleci/openjdk:9.0.4-12
 
 
 # Define the jobs we want to run for this project
 jobs:
   # Specify test executors
   test-with-docker:
-    executor: build-executor
+    executor: ci-executor
     steps:
       - test
   # Specify build executors
   build-with-docker:
-    executor: ci-executor
+    executor: build-executor
     steps:
       - build
 
