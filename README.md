@@ -84,4 +84,7 @@ Not much issue here.
 - Let's remove all circleci and azure devops depenedenc as I am trying docker desktop
 - Add back circleci and remove github workflow
 
+- Some debates between npm and yarn
+    - https://tomiko0404.hatenablog.com/entry/npm-yarn-install
+    - https://www.section.io/engineering-education/npm-vs-yarn-which-one-to-choose:~:text=One%20of%20the%20main%20differenceand%20install%20multiple%20packages%20simultaneously.
 
