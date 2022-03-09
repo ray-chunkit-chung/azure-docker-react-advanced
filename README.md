@@ -52,6 +52,15 @@ Spinning up the dev env with VSCode and Docker desktop has been very smooth. Now
 
 Docker Desktop x VSCode is very good. Successfully encapsulate all the things I need. 
 
+
+If you have unix socket issue, see this
+Fix Docker VS Code Error: connect EACCES /var/run/docker.sock
+ - https://www.davidhayden.me/blog/fix-docker-vs-code-error-connect-eacces-var-run-docker-sock
+ - https://code.visualstudio.com/docs/containers/troubleshooting
+ - https://docs.docker.com/engine/install/linux-postinstall/
+
+ 
+
 ## Azure DevOps
 Azure DevOps keeps throwing me this error.
 
