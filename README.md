@@ -1,6 +1,12 @@
-# Azure Dockerfile React
+# Azure Docker React Web App
 
-A better starter version than [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
+Prod app link
+ - https://web-app-starter-ray-chunkit-chung.azurewebsites.net/
+
+Reveiw app link
+ - Coming soon...
+
+A previous version here [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
 
 # Getting Started
 
@@ -9,10 +15,9 @@ coming soon...
 # Current Stack
 
  - src on github
- - docker desktop x vscode
- - build using Dockerfile
- - auto test and build by circleCI
- - build to dockerhub
+ - dev env using docker desktop x vscode
+ - auto test and build on circleCI by github push trigger
+ - build to dockerhub. Separates images for review app & production app
  - azure app service auto deploy triggered by latest build on dockerhub
 
 # Experiment Journey
