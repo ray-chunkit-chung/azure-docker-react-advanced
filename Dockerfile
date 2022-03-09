@@ -8,9 +8,9 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json /app
-RUN npm install
+RUN yarn install
 COPY . /app
-RUN npm run build
+RUN yarn build
 
 # production environment
 FROM nginx:stable-alpine
