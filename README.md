@@ -17,7 +17,7 @@ coming soon...
  - src on github
  - dev env using docker desktop x vscode
  - auto test and build on circleCI by github push trigger
- - build to dockerhub. Separates images for review app & production app
+ - build to dockerhub. Separate [review image](https://hub.docker.com/repository/docker/raychung/azure-docker-react-advanced-dev) & [production image](https://hub.docker.com/repository/docker/raychung/azure-docker-react-advanced)
  - azure app service auto deploy triggered by latest build on dockerhub
 
 # Experiment Journey
