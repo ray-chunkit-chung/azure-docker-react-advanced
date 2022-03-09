@@ -53,13 +53,15 @@ Spinning up the dev env with VSCode and Docker desktop has been very smooth. Now
 Docker Desktop x VSCode is very good. Successfully encapsulate all the things I need. 
 
 
-If you have unix socket issue, see this
+If you have unix socket issue, which prevent you from building or pulling dockerhub images, see this
 Fix Docker VS Code Error: connect EACCES /var/run/docker.sock
  - https://www.davidhayden.me/blog/fix-docker-vs-code-error-connect-eacces-var-run-docker-sock
  - https://code.visualstudio.com/docs/containers/troubleshooting
  - https://docs.docker.com/engine/install/linux-postinstall/
 
- 
+If you still get the error, see this
+ - https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
+
 
 ## Azure DevOps
 Azure DevOps keeps throwing me this error.

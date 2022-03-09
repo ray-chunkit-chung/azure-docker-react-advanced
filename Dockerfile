@@ -2,7 +2,7 @@
 # build environment
 FROM alpine:latest as build
 RUN apk update
-RUN apk add --update nodejs npm
+RUN apk add --update nodejs npm yarn
 RUN mkdir /app
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
