@@ -12,6 +12,9 @@ RUN yarn install
 COPY . /app
 RUN yarn build
 
+# test environment
+FROM build as test
+
 # production environment
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
