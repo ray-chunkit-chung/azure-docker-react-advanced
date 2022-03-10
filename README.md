@@ -5,7 +5,8 @@ Production app link
 Reveiw app link
  - https://web-app-review-ray-chunkit-chung.azurewebsites.net/
 
-A simple previous version here [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
+A simple previous version here
+ - [azure-docker-react-starter](https://github.com/ray-chunkit-chung/azure-docker-react-starter)
 
 
 # Getting Started
