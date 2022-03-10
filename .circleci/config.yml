@@ -2,11 +2,14 @@ version: 2.1
 
 # Define test and build commands
 commands:
-  build:
+  setup:
     steps:
       - setup_remote_docker:
           version: 20.10.11
           docker_layer_caching: true
+  build:
+    steps:
+      - setup
       - checkout
       - run: echo "this is the build job"
       - run:
@@ -26,9 +29,7 @@ commands:
     #       name: unit test
     #       command: yarn test
     steps:
-      - setup_remote_docker:
-          version: 20.10.11
-          docker_layer_caching: true
+      - setup
       - run: echo "this is the test job"
       - run:
           name: unit test
@@ -37,10 +38,7 @@ commands:
             docker run $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest sh -c "echo hello"
   deploy:
     steps:
-      - setup_remote_docker:
-          version: 20.10.11
-          docker_layer_caching: true
-      - checkout
+      - setup
       - run: echo "this is the deploy job"
       - run:
           name: Push tested image to auto-deploy
