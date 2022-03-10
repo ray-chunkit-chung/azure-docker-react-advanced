@@ -52,10 +52,7 @@ commands:
 
 # Define the executors for this project
 executors:
-  build-executor:
-    docker:
-      - image: circleci/openjdk:latest
-  test-executor:
+  docker-executor:
     docker:
       - image: circleci/node:latest
 
@@ -63,17 +60,17 @@ executors:
 jobs:
   # Specify build executors
   build-with-docker:
-    executor: build-executor
+    executor: docker-executor
     steps:
       - build
   # Specify test executors
   test-with-docker:
-    executor: test-executor
+    executor: docker-executor
     steps:
       - test
   # Specify deploy build executors
   deploy-with-docker:
-    executor: build-executor
+    executor: docker-executor
     steps:
       - deploy
 
