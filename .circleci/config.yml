@@ -2,8 +2,8 @@ version: 2.1
 
 # Make checkout faster
 # https://circleci.com/developer/orbs/orb/guitarrapc/git-shallow-clone
-orbs:
-  git-shallow-clone: guitarrapc/git-shallow-clone@2.4.0
+# orbs:
+#   git-shallow-clone: guitarrapc/git-shallow-clone@2.4.0
 
 # Define test and build commands
 commands:
