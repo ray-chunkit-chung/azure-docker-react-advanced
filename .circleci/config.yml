@@ -74,9 +74,7 @@ workflows:
   build_and_test:
     jobs:
       - build-with-docker
-      - test-with-docker:
-          requires:
-            - build-with-docker
+      - test-with-docker
       - deploy-with-docker:
           requires:
             - test-with-docker
