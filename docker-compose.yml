@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  dev:
+    image: $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest
+    ports:
+      - "8000:80"
+    command: [nginx-debug, '-g', 'daemon off;']
