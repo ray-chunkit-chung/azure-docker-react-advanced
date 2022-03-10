@@ -26,7 +26,7 @@ commands:
           name: unit test
           command: |
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker run $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest sh -c "yarn install && yarn test"
+            docker run $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest sh -c "echo hello"
   deploy:
     steps:
       - setup
@@ -43,7 +43,7 @@ commands:
 executors:
   docker-executor:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:latest
 
 # Define the jobs we want to run for this project
 jobs:

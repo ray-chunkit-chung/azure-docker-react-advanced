@@ -67,6 +67,9 @@ Fix Docker VS Code Error: connect EACCES /var/run/docker.sock
 If you still get the error, see this
  - https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
 
+```
+sudo chmod 666 /var/run/docker.sock
+```
 
 ## Azure DevOps
 Azure DevOps keeps throwing me this error.
