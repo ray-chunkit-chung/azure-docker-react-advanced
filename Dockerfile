@@ -18,7 +18,8 @@ FROM build as test
 # production environment
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
+
+# Manual deploy if no automation
 # EXPOSE 80
 # CMD ["nginx", "-g", "daemon off;"]
-
 
