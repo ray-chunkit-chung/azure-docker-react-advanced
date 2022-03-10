@@ -14,6 +14,7 @@ RUN yarn build
 
 # test environment
 FROM build as test
+CMD ["yarn", "test"]
 
 # production environment
 FROM nginx:stable-alpine
