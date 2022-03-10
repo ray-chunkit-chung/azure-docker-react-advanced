@@ -18,7 +18,7 @@ commands:
       - checkout
       - run: echo "this is the build job"
       - run:
-          name: Build to dockerhub for test
+          name: Build dev to dockerhub
           command: |
             docker build -t $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
@@ -26,12 +26,13 @@ commands:
   test:
     steps:
       - setup
+      - checkout
       - run: echo "this is the test job"
       - run:
-          name: unit test
+          name: Build test target
           command: |
-            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker run $DOCKER_USERNAME/azure-docker-react-advanced-dev:latest sh -c "echo hello"
+            docker build -t unit-test --target test .
+            docker run --name unit-test unit-test
   deploy:
     steps:
       - setup
