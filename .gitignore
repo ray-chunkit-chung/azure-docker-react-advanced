@@ -9,3 +9,7 @@ npm-debug.log
 
 # Log
 *.log
+
+# local files
+local
+
