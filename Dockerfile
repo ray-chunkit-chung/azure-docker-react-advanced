@@ -20,7 +20,11 @@ CMD ["yarn", "test"]
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Manual deploy if no automation
+
+###########################################
+# Manual deploy if no auto port binding
+###########################################
+
 # EXPOSE 80
 # CMD ["nginx", "-g", "daemon off;"]
 
