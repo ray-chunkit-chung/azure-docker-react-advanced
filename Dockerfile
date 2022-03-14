@@ -1,5 +1,8 @@
+###########################
+# Build environment
+###########################
 
-# build environment
+# Get minimal base image
 FROM alpine:latest as build
 RUN apk update
 RUN apk add --update nodejs npm yarn
@@ -12,11 +15,17 @@ RUN yarn install
 COPY . /app
 RUN yarn build
 
-# test environment
+###########################
+# Test environment
+###########################
+
 FROM build as test
 CMD ["yarn", "test"]
 
-# production environment
+###########################
+# Production environment
+###########################
+
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
